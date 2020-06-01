@@ -7,8 +7,8 @@
     tools:context=".MainActivity">
 
     <EditText
-        android:text="0"
         android:inputType="number"
+        android:text="0"
         android:id="@+id/edt_unit1"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toLeftOf="@id/sp_unit1"
@@ -18,8 +18,8 @@
         android:layout_height="?actionBarSize"/>
 
     <EditText
-        android:text="0"
         android:inputType="number"
+        android:text="0"
         android:id="@+id/edt_unit2"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toLeftOf="@id/sp_unit2"
@@ -57,5 +57,41 @@
         android:id="@+id/tv_congthuc"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"/>
+
+    <LinearLayout
+        android:padding="@dimen/dp20"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_congthuc"
+        android:orientation="horizontal"
+        android:layout_weight="1"
+        android:layout_width="match_parent"
+        android:layout_height="0dp">
+
+        <Button
+            android:textSize="40sp"
+            android:text="-"
+            android:id="@+id/btnminus"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"/>
+
+        <Button
+            android:textSize="40sp"
+            android:text="."
+            android:id="@+id/btndot"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"/>
+
+        <Button
+            android:textSize="40sp"
+            android:text="C"
+            android:id="@+id/btndel"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
