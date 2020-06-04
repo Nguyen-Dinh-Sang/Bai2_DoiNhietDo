@@ -80,7 +80,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
             @Override
             public void onTextChanged(CharSequence s, int start, int before, int count) {
-               if(edt1.getText().toString().equals("")||edt1.getText().toString().equals("-")){
+               if(edt1.getText().toString().equals("")||edt1.getText().toString().equals("-")||edt1.getText().toString().equals(".")||edt1.getText().toString().equals("-.")){
                    edt1.setText("0");
                 }else {
                     calculatUnit2();
@@ -100,7 +100,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
             @Override
             public void onTextChanged(CharSequence s, int start, int before, int count) {
-                if(edt2.getText().toString().equals("")||edt2.getText().toString().equals("-")){
+                if(edt2.getText().toString().equals("")||edt2.getText().toString().equals("-")||edt2.getText().toString().equals(".")||edt2.getText().toString().equals("-.")){
                     edt2.setText("0");
                 }else {
                     calculatUnit1();
