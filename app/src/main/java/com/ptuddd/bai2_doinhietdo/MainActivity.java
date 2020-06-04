@@ -80,12 +80,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
             @Override
             public void onTextChanged(CharSequence s, int start, int before, int count) {
-//                if(isNumeric(edt1.getText().toString())||edt1.getText().toString().equals("-")||edt1.getText().toString().equals(".")){
-
+               if(edt1.getText().toString().equals("")||edt1.getText().toString().equals("-")){
+                   edt1.setText("0");
+                }else {
                     calculatUnit2();
-//                }else {
-//                    edt1.setText(edt1.getText());
-//                }
+                }
             }
 
             @Override
@@ -257,7 +256,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 }
             }
             if(string=="del"){
-                edt1.setText(edt1.getText().toString().substring(0,edt1.getText().length()-1));
+                if(edt1.getText().toString().length()==1){
+                    edt1.setText("0");
+            }else {
+                    edt1.setText(edt1.getText().toString().substring(0, edt1.getText().length() - 1));
+            }
             }
             if(string=="."){
                 if (!edt1.getText().toString().contains("."))
@@ -277,7 +280,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 }
             }
             if(string=="del"){
-                edt2.setText(edt2.getText().toString().substring(0,edt2.getText().length()-1));
+                if(edt2.getText().toString().length()==1){
+                    edt2.setText("0");
+                }else {
+                    edt2.setText(edt2.getText().toString().substring(0, edt2.getText().length() - 1));
+                }
             }
             if(string=="."){
                 if (!edt2.getText().toString().contains("."))
